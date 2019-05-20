@@ -25,12 +25,12 @@ code {
 }
 
 .form-inputs{
-  padding: 30px;
+  padding: 35px;
 }
 
 .title{
   text-align: center;
-  font-size: 2em;
+  font-size: 3em;
   color: #fff;
 }
 
@@ -41,18 +41,18 @@ code {
 
 .inline-form .form-element{
   float: left;
-  width: 70%;
+  width: 60%;
 }
 
 .inline-form .element{
   float: left;
-  width: 30%;
+  width: 40%;
   text-align: right;
 }
 
 .inline-form{
   display: flex;
-  padding: 3px;
+  padding: 4px;
 }
 
 .form-element{
