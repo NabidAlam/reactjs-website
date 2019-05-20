@@ -13,78 +13,108 @@ code {
 }
 
 
-/* 
-* {box-sizing: border-box} */
-
-/* Full-width input fields */
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-  width: 42%;
+.box{
+  background-color: #7f7586;
+  width: 30%;
+  height: auto;
+  padding: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-
+  transform: translate(-50%, -50%)
 }
 
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.form-inputs{
+  padding: 30px;
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
+.title{
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+}
+
+.textForAcc{
+  text-align: center;
+  color: #fff
+}
+
+.inline-form .form-element{
+  float: left;
+  width: 70%;
+}
+
+.inline-form .element{
+  float: left;
+  width: 30%;
+  text-align: right;
+}
+
+.inline-form{
+  display: flex;
+  padding: 3px;
+}
+
+.form-element{
+  text-align: left;
+}
+
+.form-element input{
+  width: 98%;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  background-color: #f1f1f1;
+}
+
+.text{
+  margin-right: 20px;
+  color: white;
+}
+
+.center{
+  text-align: center;
+}
+
+.divider{
+  margin-top: 10px;
+}
+
+.btn-primary{
+      color: white;
+      background-color:#1cb4ea;
+      padding: 10px 30px;
+      border: 0;
+      border-color: 1px solid;
+      border: 1px solid;
+}
+
+@media screen and (max-width: 700px) {
+  .inline-form {
+    flex-direction: column;
+  }
+
+  .box{
+    width: 70%;
+  }
+
+  .inline-form .element{
+    text-align: left;
+  }
+
+  .inline-form .form-element{
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .box{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .box{
+    width: 80%;
   }
 }
