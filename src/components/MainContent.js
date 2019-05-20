@@ -1,106 +1,169 @@
-import React from 'react'
-import '../index.css'
-function MainContent(){
-    return (
-      // <form action="/action_page.php">
-      //  <fieldset>
-      //     <div class="container">
-      //       <h1>Sign Up</h1>
-      //       <p>Please fill in this form to create an account.</p>
-      //       <hr/>
-        
+import React from "react";
+//import '../index.css'
+import styled from "styled-components";
 
-      //       <label for="userName"><b>Name</b></label>
-      //       <input type="text" placeholder="Enter Name" name="userName"/>
-      //       <br/>
+const Box = styled.div`
+  background-color: #7f7586;
+  width: 30%;
+  height: auto;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+`;
 
+const Title = styled.h1`
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+`;
+const TextForAccount = styled.h1`
+  text-align: center;
+  color: #fff;
+`;
 
-      //       <label for="email"><b>Email</b></label>
-      //       <input type="text" placeholder="Enter Email" name="email" required/>
-      //       <br/>
-        
-      //       <label for="psw"><b>Password</b></label>
-      //       <input type="password" placeholder="Enter Password" name="psw" required/>
-      //       <br/>
-      //       <label for="psw-repeat"><b>Repeat Password</b></label>
-      //       <input type="password" placeholder="Repeat Password" name="psw-repeat" required/>
-      //       <br/>
-      //       <label>
-      //         <input type="checkbox" checked="checked" name="remember"/> Remember me
-      //       </label>
-      //       <br/>
-      //       <p>By creating an account you agree to our Terms & Privacy.</p>
-        
-      //       <div class="clearfix">
-      //         <button type="button" class="cancelbtn">Cancel</button>
-      //         <button type="submit" class="signupbtn">Sign Up</button>
-      //       </div>
-      //     </div>
-      //     </fieldset>
-      // </form>
+const FormInput = styled.div`
+  padding: 35px;
+  text-align: center;
+`;
+const InlineForm = styled.div`
+  display: flex;
+  padding: 4px;
+`;
 
-// <div id="form">
-//     <form action="" name="registration" class="register">
-//         <fieldset>
-//             <div class="form-group">
-//                 <label for="Student">Name:</label>
-//                 <input name="Student" id="Student" />
-//             </div>
-          
-//             <div class="form-group">
-//                 <label for="Email">Email:</label>
-//                 <input name="Email" id="Email" />
-//             </div>
-           
-//             <div class="form-group">
-//                 <label for="Password">Password:</label>
-//                 <input name="Password" id="Password" type="password" />
-//             </div>
-//             {/* <input name="regbutton" type="button" class="button" value="Sign Up" /> */}
+const Label = styled.div`
+  float: left;
+  width: 40%;
+  text-align: right;
+`;
 
-//             <div class="clearfix">
-//                <button type="button" class="cancelbtn">Cancel</button>
-//               <button type="submit" class="signupbtn">Sign Up</button>
-//             </div>
-//         </fieldset>
-//     </form>
-// </div>
+const TextBox = styled.div`
+  float: left;
+  width: 60%;
+`;
 
+const InputText = styled.input`
+  width: 98%;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  background-color: #f1f1f1;
+`;
 
-<div className="box">
-<div className="title">
-  <span><b>Sign Up</b></span>
-</div>
+const Button = styled.div`
+  text-align: center;
+  margin-top: 10px;
+`;
 
-<div className="textForAcc">
-  <p>Please fill in this form to create an account.</p>
-</div>
+const ButtonPrimary = styled.input`
+  color: white;
+  background-color: #1cb4ea;
+  padding: 10px 30px;
+  border: 0;
+  border-color: 1px solid;
+  border: 1px solid;
+`;
 
+function MainContent() {
+  return (
+    <Box>
+      <Title>Sign Up</Title>
+      <TextForAccount>
+        Please fill in this form to create an account.
+      </TextForAccount>
 
-<div className="form-inputs">
-  <div className="inline-form">
-    <div className="element"><span className="text"><b>Name</b></span></div>
-    <div className="form-element"><input type="text" name="name" placeholder="Name"></input></div>
-  </div>
-  <div className="inline-form">
-    <div className="element"><span className="text"><b>Email</b></span></div>
-    <div className="form-element"><input type="text" name="email" placeholder="Email"></input></div>
-  </div>
-  <div className="inline-form">
-    <div className="element"><span className="text"><b>Password</b></span></div>
-    <div className="form-element"><input type="password" name="password" placeholder="Password"></input></div>
-  </div>
-  <div className="inline-form">
-    <div className="element"><span className="text"><b>Retype Password</b></span></div>
-    <div className="form-element"><input type="password" name="password" placeholder="Retype Password"></input></div>
-  </div>
-  <div className="center divider">
-    <input className="btn-primary" type="button" value="Sign In"></input>
-  </div>
-</div>
-</div>
+      <FormInput>
+        <InlineForm>
+          <Label>
+            <span className="text">
+              <b>Name</b>
+            </span>
+          </Label>
+          <TextBox>
+            <InputText type="text" name="name" placeholder="Name" />
+          </TextBox>
+        </InlineForm>
 
-    )
+        <InlineForm>
+          <Label>
+            <span className="text">
+              <b>Email</b>
+            </span>
+          </Label>
+          <TextBox>
+            <InputText type="text" name="email" placeholder="Email" />
+          </TextBox>
+        </InlineForm>
+
+        <InlineForm>
+          <Label>
+            <span className="text">
+              <b>Password</b>
+            </span>
+          </Label>
+          <TextBox>
+            <InputText type="password" name="password" placeholder="Password" />
+          </TextBox>
+        </InlineForm>
+
+        <InlineForm>
+          <Label>
+            <span className="text">
+              <b>Retype Password</b>
+            </span>
+          </Label>
+          <TextBox>
+            <InputText
+              type="password"
+              name="password"
+              placeholder="Retype Password"
+            />
+          </TextBox>
+
+         
+        </InlineForm>
+
+        <Button>
+            <ButtonPrimary type="button" value="Sign In" />
+        </Button>
+
+      </FormInput>
+    </Box>
+
+    //   <div className="box">
+    //     <div className="title">
+    //       <span><b>Sign Up</b></span>
+    //     </div>
+
+    //   <div className="textForAcc">
+    //     <p>Please fill in this form to create an account.</p>
+    //   </div>
+
+    //   <div className="form-inputs">
+    //       <div className="inline-form">
+    //         <div className="element"><span className="text"><b>Name</b></span></div>
+    //         <div className="form-element"><input type="text" name="name" placeholder="Name"></input></div>
+    //       </div>
+    //       <div className="inline-form">
+    //         <div className="element"><span className="text"><b>Email</b></span></div>
+    //         <div className="form-element"><input type="text" name="email" placeholder="Email"></input></div>
+    //       </div>
+    //       <div className="inline-form">
+    //         <div className="element"><span className="text"><b>Password</b></span></div>
+    //         <div className="form-element"><input type="password" name="password" placeholder="Password"></input></div>
+    //       </div>
+    //       <div className="inline-form">
+    //         <div className="element"><span className="text"><b>Retype Password</b></span></div>
+    //         <div className="form-element"><input type="password" name="password" placeholder="Retype Password"></input></div>
+    //       </div>
+    //       <div className="center divider">
+    //         <input className="btn-primary" type="button" value="Sign In"></input>
+    //       </div>
+    //   </div>
+    // </div>
+  );
 }
 
-export default MainContent
+export default MainContent;
