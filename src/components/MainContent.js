@@ -11,7 +11,6 @@ const Box = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
 `;
 
 const Title = styled.h1`
@@ -66,6 +65,11 @@ const ButtonPrimary = styled.input`
   border: 1px solid;
 `;
 
+const LabelText = styled.span`
+  margin-right: 40px;
+  color: white;
+`;
+
 function MainContent() {
   return (
     <Box>
@@ -76,59 +80,35 @@ function MainContent() {
 
       <FormInput>
         <InlineForm>
-          <Label>
-            <span className="text">
-              <b>Name</b>
-            </span>
-          </Label>
+          <LabelText>
+            <b>Name</b>
+          </LabelText>
           <TextBox>
             <InputText type="text" name="name" placeholder="Name" />
           </TextBox>
         </InlineForm>
 
         <InlineForm>
-          <Label>
-            <span className="text">
-              <b>Email</b>
-            </span>
-          </Label>
+          <LabelText>
+            <b>Email</b>
+          </LabelText>
           <TextBox>
             <InputText type="text" name="email" placeholder="Email" />
           </TextBox>
         </InlineForm>
 
         <InlineForm>
-          <Label>
-            <span className="text">
-              <b>Password</b>
-            </span>
-          </Label>
+          <LabelText>
+            <b>Password</b>
+          </LabelText>
           <TextBox>
             <InputText type="password" name="password" placeholder="Password" />
           </TextBox>
         </InlineForm>
 
-        <InlineForm>
-          <Label>
-            <span className="text">
-              <b>Retype Password</b>
-            </span>
-          </Label>
-          <TextBox>
-            <InputText
-              type="password"
-              name="password"
-              placeholder="Retype Password"
-            />
-          </TextBox>
-
-         
-        </InlineForm>
-
         <Button>
-            <ButtonPrimary type="button" value="Sign In" />
+          <ButtonPrimary type="button" value="Sign In" />
         </Button>
-
       </FormInput>
     </Box>
 
