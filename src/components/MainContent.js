@@ -11,6 +11,22 @@ const Box = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media screen and (min-width: 700px) {
+  
+    width: 70%;
+  
+  }
+  @media screen and (min-width: 1024px) {
+   
+    width: 50%;
+  
+  }
+  @media screen and (min-width: 375px) {
+    
+    width: 80%;
+
+  }
 `;
 
 const Title = styled.h1`
@@ -36,11 +52,23 @@ const Label = styled.div`
   float: left;
   width: 40%;
   text-align: right;
+
+  
+  @media (min-width: 700px) {
+    .inline-form .element{
+    text-align: left;
+  }
+
+  }
+
 `;
 
 const TextBox = styled.div`
   float: left;
   width: 60%;
+
+
+  }
 `;
 
 const InputText = styled.input`
@@ -49,6 +77,12 @@ const InputText = styled.input`
   border: none;
   padding: 5px;
   background-color: #f1f1f1;
+
+  @media (min-width: 700px) {
+    .inline-form .form-element{
+    width: 100%;
+  }
+  }
 `;
 
 const Button = styled.div`
@@ -66,7 +100,7 @@ const ButtonPrimary = styled.input`
 `;
 
 const LabelText = styled.span`
-  margin-right: 40px;
+  margin-right: 20px;
   color: white;
 `;
 
@@ -80,27 +114,36 @@ function MainContent() {
 
       <FormInput>
         <InlineForm>
-          <LabelText>
-            <b>Name</b>
-          </LabelText>
+          <Label>
+            <LabelText>
+              <b>Name</b>
+            </LabelText>
+          </Label>
+
           <TextBox>
             <InputText type="text" name="name" placeholder="Name" />
           </TextBox>
         </InlineForm>
 
         <InlineForm>
-          <LabelText>
-            <b>Email</b>
-          </LabelText>
+          <Label>
+            <LabelText>
+              <b>Email</b>
+            </LabelText>
+          </Label>
+
           <TextBox>
             <InputText type="text" name="email" placeholder="Email" />
           </TextBox>
         </InlineForm>
 
         <InlineForm>
-          <LabelText>
-            <b>Password</b>
-          </LabelText>
+          <Label>
+            <LabelText>
+              <b>Password</b>
+            </LabelText>
+          </Label>
+
           <TextBox>
             <InputText type="password" name="password" placeholder="Password" />
           </TextBox>
